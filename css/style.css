@@ -1,0 +1,197 @@
+/* CSS for smallest device screen type (eg. mobile phone <650px) */
+
+/* G E N E R I C */
+* {
+    box-sizing: border-box;
+}
+
+/* Used for social media logo's */
+[class*="zocial-"]:before {
+    display: inline-block;
+    font-family: 'zocial', sans-serif;
+    width: 2em;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2d3c49;
+    background-color: white;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* Set style for new paragraph title */
+.paragraph-title {
+    color: #7d97ad;
+    -webkit-margin-before: 0px;
+    -webkit-margin-start: 7px;
+    -webkit-margin-after: 0px;
+    font-size: 1.0em;
+}
+
+/* Set style for new horizontal line */
+.custom-hr {
+    width: 98%;
+    line-height: 3.5px;
+    background-color: #7d97ad;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+/* H E A D E R  -  S E C T I O N */
+/* Set style for fixed header */
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.header-vertical-centerer {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-space-between {
+    justify-content: space-between;
+}
+
+/* Udacity logo */
+.header-logo {
+    height: 40px;
+    width: 50px;
+    display: inline-block;
+    margin: 15px 30px 0px;
+}
+
+.header-content {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-text-section {
+    text-align: right;
+}
+
+.header-name-section {
+    font-size: 1.3em;
+    margin: 15px 0px 0px;
+}
+        
+.header-jobname-section {
+    font-size: 0.7em;
+    margin: 0px 0px;
+}
+
+/* I N T R O  -  S E C T I O N */
+/* Set padding for body because header is fixed */
+.section-intro-info {
+    padding-top: 4.0em;
+}
+
+/* Set style for photo inside the introduction section */
+.myphoto {
+    float: left;
+    width: 90px;
+    height: 120px;
+    margin: 25px 25px 0px 7px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #7d97ad;
+}
+
+/* Set style for text which is displayed right from the photo inside the introduction section */
+.intro-paragraph {
+    float: right;
+    font-size: small;
+    margin: 15px 10px 25px 1px;
+}
+
+/* Set the style for the size of the social media logo's within the introduction text */
+.zocial-font-size-intro {
+    font-size: x-small;
+}
+
+/* P R O J E C T  -  S E C T I O N */
+/* Wrap boxes for small screen width */
+.work-section {
+    flex-wrap: wrap;
+}
+
+/* Set padding for last section because footer is fixed */
+.section-work-info {
+    padding-bottom: 0.65em;
+}
+
+/* Set the style for the different projects */
+.work-content {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Set style for project title */
+.project-title {
+    text-align: left;
+    font-size: 1em;
+    margin-left: 7px;
+    -webkit-margin-after: 0px;
+}
+
+/* Set the order of the project boxes */
+.project-1 {
+    order: 1;
+}
+
+.project-2 {
+    order: 2;
+}
+
+.project-3 {
+    order: 3;
+}
+
+/* Set the style for the project photo */
+.projectphoto {
+    width: 97%;
+    height: 250px;
+    margin: 10px 3px 0px 5px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #7d97ad;
+}
+
+.zocial-font-size-project {
+    font-size: small;
+}
+
+.span-project-info {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    font-size: small;
+}
+
+/* F O O T E R  -  S E C T I O N */
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+.footer-info {
+    background-color: white;
+    width: 100%;
+    height: 15px;
+    font-size: 0.6em;
+    text-align: center;
+}
