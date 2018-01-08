@@ -1,46 +1,67 @@
-/* CSS for smallest device screen type (eg. mobile phone <650px) */
-
 /* G E N E R I C */
 * {
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #2d3c49;
+    background-color: white;
+}
+
 /* Used for social media logo's */
 [class*="zocial-"]:before {
     display: inline-block;
-    font-family: 'zocial', sans-serif;
-    width: 2em;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #2d3c49;
-    background-color: white;
+    font-family: "zocial", sans-serif;
+    width: 1.5em;
 }
 
 .flex-container {
     display: flex;
 }
 
-/* Set style for new paragraph title */
-.paragraph-title {
-    color: #7d97ad;
-    -webkit-margin-before: 0px;
-    -webkit-margin-start: 7px;
-    -webkit-margin-after: 0px;
-    font-size: 1.0em;
-}
-
-/* Set style for new horizontal line */
+/* Set style for new horizontal line after header and before footer */
 .custom-hr {
     width: 98%;
     line-height: 3.5px;
     background-color: #7d97ad;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
     margin-left: auto;
     margin-right: auto;
     color: white;
+}
+
+/* Set style for new section heading */
+.h1 {
+    color: #7d97ad;
+    -webkit-margin-before: 10;
+    -webkit-margin-start: 0;
+    -webkit-margin-after: 0;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+/* Add media query for resizing window on other device */ 
+@media screen and (min-width: 525px) {
+    .h1 {
+    font-size: 1.3em;
+    justify-content: flex-start;
+    -webkit-margin-start: 7px;
+    }
+}
+
+/* Set style for new project heading */
+.h2 {
+    justify-content: center;
+    font-size: 0.9em;
+    -webkit-margin-after: 0;
+}
+
+@media screen and (min-width: 525px) {
+    .h2 {
+    font-size: 1.1em;
+    }
 }
 
 /* H E A D E R  -  S E C T I O N */
@@ -64,10 +85,10 @@ body {
 
 /* Udacity logo */
 .header-logo {
-    height: 40px;
-    width: 50px;
-    display: inline-block;
-    margin: 15px 30px 0px;
+    height: auto;
+    width: auto;
+    display: flex;
+    margin: 10px 15px 5px;
 }
 
 .header-content {
@@ -82,101 +103,228 @@ body {
 
 .header-name-section {
     font-size: 1.3em;
-    margin: 15px 0px 0px;
+    margin: 8px 0 0;
 }
-        
+
+@media screen and (min-width: 525px) {
+    .header-name-section {
+        font-size: 1.5em;
+        margin: 15px 0 0;
+    }
+}
+
 .header-jobname-section {
-    font-size: 0.7em;
-    margin: 0px 0px;
+    font-size: 0.8em;
+    margin: 0 0;
+}
+
+@media screen and (min-width: 525px) {
+    .header-jobname-section {
+        font-size: 1.1em;
+    }
 }
 
 /* I N T R O  -  S E C T I O N */
 /* Set padding for body because header is fixed */
-.section-intro-info {
-    padding-top: 4.0em;
+.intro {
+    flex-flow: column;
+    padding-top: 3em;
 }
 
-/* Set style for photo inside the introduction section */
-.myphoto {
-    float: left;
-    width: 90px;
-    height: 120px;
-    margin: 25px 25px 0px 7px;
+@media screen and (min-width: 525px) {
+    .intro {
+        padding-top: 4.3em;
+    }
+}
+
+.intro-body {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 525px) {
+    .intro-body {
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 8px;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .intro-body {
+        margin: 0 25px;
+    }
+}
+
+/* Set style for image inside the introduction section */
+.intro-object {
     border-style: solid;
     border-width: thin;
     border-color: #7d97ad;
+    margin: 10px 0;
 }
 
-/* Set style for text which is displayed right from the photo inside the introduction section */
-.intro-paragraph {
-    float: right;
+@media screen and (min-width: 525px) {
+    .intro-object {
+        margin: 20px 25px 20px 7px;
+    }
+}
+
+/* Set style for the whole text container */
+.intro-text-container {
+    flex-flow: column;
+    text-align: center;
+}
+
+@media screen and (min-width: 525px) {
+    .intro-text-container {
+        flex: 1;
+        text-align: left;
+    }
+}
+
+/* Set style for text */
+.intro-text {
     font-size: small;
-    margin: 15px 10px 25px 1px;
+    -webkit-margin-after: 0.3em;
 }
 
-/* Set the style for the size of the social media logo's within the introduction text */
+@media screen and (min-width: 525px) {
+    .intro-text {
+        font-size: medium;
+    }
+}
+
+/* Set style for the social media icons */
+.intro-zocial {
+    flex-flow: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 525px) {
+    .intro-zocial {
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+}
+
 .zocial-font-size-intro {
     font-size: x-small;
 }
 
+@media screen and (min-width: 525px) {
+    .zocial-font-size-intro {
+        font-size: small;
+    }
+}
+
 /* P R O J E C T  -  S E C T I O N */
-/* Wrap boxes for small screen width */
-.work-section {
-    flex-wrap: wrap;
-}
-
 /* Set padding for last section because footer is fixed */
-.section-work-info {
-    padding-bottom: 0.65em;
+.projects {
+    flex-flow: column;
+    padding-bottom: 1em;
 }
 
-/* Set the style for the different projects */
-.work-content {
-    text-align: center;
-    margin-bottom: 15px;
-    width: 100%;
+.project-body {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Set style for project title */
-.project-title {
-    text-align: left;
-    font-size: 1em;
-    margin-left: 7px;
-    -webkit-margin-after: 0px;
+.project-content {
+    flex-flow: column;
+    justify-content: center;
 }
 
-/* Set the order of the project boxes */
-.project-1 {
+/* Set order for different projects */
+.project1 {
     order: 1;
 }
 
-.project-2 {
+.project2 {
     order: 2;
 }
 
-.project-3 {
+.project3 {
     order: 3;
 }
 
+@media screen and (min-width: 525px) {
+    .project1 {
+        max-width: 50%;
+    }
+
+    .project2 {
+        max-width: 50%;
+    }
+
+    .project3 {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .project1 {
+        max-width: 33%;
+    }
+
+    .project2 {
+        max-width: 33%;
+    }
+
+    .project3 {
+        max-width: 33%;
+    }
+}
+
 /* Set the style for the project photo */
-.projectphoto {
-    width: 97%;
-    height: 250px;
-    margin: 10px 3px 0px 5px;
+.project-object {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
     border-style: solid;
     border-width: thin;
     border-color: #7d97ad;
 }
 
-.zocial-font-size-project {
-    font-size: small;
+@media screen and (min-width: 525px) {
+    .project-object {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
-.span-project-info {
+/* Set style for project text 'in progress' */
+.project-info-ip {
     color: red;
     font-weight: bold;
     font-style: italic;
-    font-size: small;
+    font-size: x-small;
+    justify-content: center;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+@media screen and (min-width: 525px) {
+    .project-info-ip {
+        font-size: small;
+    }
+}
+
+/* Set style for github project text */
+.project-info-github {
+    font-size: x-small;
+    justify-content: center;
+}
+
+@media screen and (min-width: 525px) {
+    .project-info-github {
+        font-size: small;
+    }
 }
 
 /* F O O T E R  -  S E C T I O N */
@@ -186,12 +334,19 @@ body {
     bottom: 0;
     left: 0;
     background-color: white;
+    flex-flow: column;
 }
 
 .footer-info {
     background-color: white;
     width: 100%;
     height: 15px;
-    font-size: 0.6em;
+    font-size: 0.7em;
     text-align: center;
+}
+
+@media screen and (min-width: 525px) {
+    .footer-info {
+        font-size: 0.8em;
+    }
 }

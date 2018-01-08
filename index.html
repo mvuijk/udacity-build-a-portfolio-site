@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <title>M.Vuijk - Portfolio Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css"  type="text/css" media="screen and (min-width:1px)">
-        <link rel="stylesheet" href="css/style_over650.css" type="text/css" media="screen and (min-width:650px)">
-        <link rel="stylesheet" href="css/style_over950.css" type="text/css" media="screen and (min-width:950px)">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial">
     </head>
@@ -14,69 +12,76 @@
         <header class="header-container">
             <div class="flex-container header-content header-vertical-centerer">
                 <div class="flex-container header-space-between">
-                    <img class="header-logo" src="img/logo.png" alt="Udacity Logo">
+                    <picture>
+                        <source media="(min-width: 525px)" srcset="img/logo_60x60.png">
+                        <img class="header-logo" src="img/logo_40x40.png" alt="Udacity Logo">
+                    </picture>
                     <div class="header-text-section">
                         <p class="header-name-section">MARCEL VUIJK<br/></p>
                         <p class="header-jobname-section">FULL STACK WEB DEVELOPER</p>
                     </div>
                 </div>
             </div>
-            <div class="custom-hr">.</div>
+            <div class="flex-container custom-hr">.</div>
         </header>
-        <section class="section-intro-info">
-            <h3 class="flex-container paragraph-title">Introduction</h3>
-            <div class="flex-container">
-                <img class="myphoto" src="img/myphoto1.jpg" alt="Picture M.Vuijk">
-                <p class="intro-paragraph">My name is Marcel Vuijk (38) and since 2017 a Udacity Student.<br/>
-                    I have build this website as part of a NanoDegree Program named "Full Stack Web Developer".<br/>
-                    In feature I will use this portfolio-website to add and present my projects which I'm delivering as 
-                    part of the Nanodegree Program.<br/>
-                    Besides that I will continously try to optimize the layout and behaviour of this website to become 
-                    more confindent with designing and building websites.<br/>
-                    <a class="zocial-linkedin zocial-font-size-intro" href="https://www.linkedin.com/in/marcel-vuijk-12069527/"></a>
-                    <a class="zocial-facebook zocial-font-size-intro" href="https://www.facebook.com/mvuijk"></a>
-                </p>
+        <div class="flex-container intro">
+            <h1 class="flex-container h1">Introduction</h1>
+            <div class="flex-container intro-body">
+                <picture>
+                    <source media="(min-width: 525px)" srcset="img/myphoto_100x120.jpg">
+                    <img class="flex-container intro-object" src="img/myphoto_80x100.jpg" alt="Image M.Vuijk">
+                </picture>
+                <div class="flex-container intro-text-container">
+                    <p class="flex-container intro-text">My name is Marcel Vuijk (38) and since 2017 a Udacity Student.
+                        I have build this website as part of the NanoDegree Program "Full Stack Web Developer".<br/><br>
+                        In feature I will use this portfolio-website to add and present my projects which I'm delivering as 
+                        part of the Program.<br/>
+                        Besides that I will continously optimize the layout and behaviour of this website to become 
+                        more confindent and mature with designing and building websites.<br/></p>
+                    <div class="flex-container intro-zocial">
+                        <a class="zocial-linkedin zocial-font-size-intro" target="_blank"
+                           href="https://www.linkedin.com/in/marcel-vuijk-12069527/"></a>
+                        <a class="zocial-facebook zocial-font-size-intro" target="_blank"
+                           href="https://www.facebook.com/mvuijk"></a>    
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="section-work-info">
-            <h3 class="flex-container paragraph-title">Featured Work</h3>
-            <div class="flex-container work-section">
-                <article class="project-1 work-content">
-                    <h3 class="project-title">MOVIE TRAILER WEBSITE</h3>
+        </div>
+        <div class="flex-container projects">
+            <h1 class="flex-container h1">Featured Projects</h1>
+            <div class="flex-container project-body">
+                <div class="flex-container project-content project1">
+                    <h2 class="flex-container h2">MOVIE TRAILER WEBSITE</h2>
                     <picture>
-                        <source media="(min-width: 650px)" srcset="img/project1.png">
-                        <img class="projectphoto" src="img/project1-small.png" alt="movie trailer website">
+                        <source media="(min-width: 525px)" srcset="img/project1_800x600.png">
+                        <img class="flex-container project-object" src="img/project1_819x339.png" alt="Movie Trailer Website">
                     </picture>
-                    <br>
-                    <a class="zocial-github zocial-font-size-project" href="https://github.com/mvuijk/ud036_ProjectMovieTrailerWebsite">GitHub Project</a>
-                </article>
-                <article class="project-2 work-content">
-                    <h3 class="project-title">BUILD AN ITEM CATALOG</h3>
+                    <a class="flex-container zocial-github project-info-github" target="_blank"
+                       href="https://github.com/mvuijk/ud036_ProjectMovieTrailerWebsite">View Source Code</a>
+                </div>
+                <div class="flex-container project-content project2">
+                    <h2 class="flex-container h2">BUILD AN ITEM CATALOG</h2>
                     <picture>
-                        <source media="(min-width: 650px)" srcset="img/project2.png">
-                        <img class="projectphoto" src="img/project2-small.png" alt="build an item catalog">
+                        <source media="(min-width: 525px)" srcset="img/project2_800x600.png">
+                        <img class="flex-container project-object" src="img/project2_819x339.png" alt="Build an Item Catalog">
                     </picture>
-                    <br>
-                    <!--TODO: add github link when project finished -->                    
-                    <span class="span-project-info">In Progress</span>
-                </article>
-                <article class="project-3 work-content">
-                    <h3 class="project-title">NEIGHBOURHOOD MAP</h3>
-                    <picture>
-                        <source media="(min-width: 650px)" srcset="img/project3.png">
-                        <img class="projectphoto" src="img/project3-small.png" alt="Neighborhood map">
-                    </picture>
-                    <br>
                     <!--TODO: add github link when project finished -->
-                    <span class="span-project-info">In Progress</span>
-                </article>
+                    <p class="flex-container project-info-ip">In Progress</p>
+                </div>
+                <div class="flex-container project-content project3">
+                    <h2 class="flex-container h2">NEIGHBOURHOOD MAP</h2>
+                    <picture>
+                        <source media="(min-width: 525px)" srcset="img/project3_800x600.png">
+                        <img class="flex-container project-object" src="img/project3_819x339.png" alt="Neighbourhood Map">
+                    </picture>
+                    <!--TODO: add github link when project finished -->
+                    <p class="flex-container project-info-ip">In Progress</p>
+                </div>
             </div>
-        </section>
-        <footer class=footer-container>
-            <div class="custom-hr">.</div>
-            <div class="flex-container">
-                <span class="footer-info">&copy; Copyright 2018 MVU</span>
-            </div>
+        </div>
+        <footer class="flex-container footer-container">
+            <div class="flex-container custom-hr">.</div>
+            <span class="footer-info">&copy; Copyright 2018 MVU</span>
         </footer>
     </body>
 </html>
